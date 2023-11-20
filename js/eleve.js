@@ -4,9 +4,8 @@ class Eleve {
      this.firstname = prenom;
      this.cours = classe;
      this.notes = {maths: [], algorithmique: [], javascript: []};
-     
     } 
-    
+
     monPrenom() {
       console.log(`Bonjour, mon prenom est ${this.firstname}`);
     } 
@@ -21,6 +20,7 @@ class Eleve {
       this.notes.maths.push(14);
       console.log(`La note de maths de John est de ${this.notes.maths}`);
     }
+
 }
 let pierre = new Eleve("Dupont", "Pierre", "Kercode");
 let marie = new Eleve("Fontaine", "Marie", "CDA");
@@ -31,11 +31,5 @@ pierre.monPrenom();
 marie.maFormation();
 marie.marieNotes();
 jonh.jonhNotes();
-
-
-
-    
-
-
 
 
