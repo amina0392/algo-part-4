@@ -60,9 +60,44 @@
     
 <script type="text/javascript">
     let groupeEleves = [];
-
+    
     // YOUR CODE HERE
-</script>
+    let pierre = new Eleve("Dupont", "Pierre", "Kercode");
+    let marie = new Eleve("Fontaine", "Marie", "CDA");
+    let jonh = new Eleve("Hunter", "Jonh", "CDUI");
+    
+    groupeEleves.push(pierre, marie, jonh);
+    console.log(pierre.firstname);
+    console.log(marie.cours);
+    marie.notes.maths.push(12);
+    jonh.notes.maths.push(14);
+    
+    
+    // Ajout d'une note aléatoire à tous les élèves 
+    // On renvoie un nombre aléatoire entre une valeur min (0) et une valeur max (20)
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (20);
+    }
+    for (let i = 0; i < groupeEleves.length; i++) {
+       groupeEleves[i].notes.algorithmique.push(parseFloat(getRandomArbitrary(0, 20).toFixed(0)));
+    }
+    // Calucler la moyenne de la classe en algorithmique 
+    let somme = 0;
+    let compteur = 0;
+        for (let i = 0; i < groupeEleves.length; i++) {
+            for (let j = 0; j < groupeEleves[i].notes.algorithmique.length; j++) {
+                somme += groupeEleves[i].notes.algorithmique[j];
+                compteur++
+            }  
+        }
+    console.log(`La moyenne de la classe en algorithmique est de : ${(somme/compteur).toFixed(2)}`);
+    pierre.bonjour();
+    marie.bonjour();
+    pierre.ajoutNoteAlgo(19);
+    pierre.ajoutNote("javascript", 16);
+    
+    
+</script> 
 </body>
 </html>
 

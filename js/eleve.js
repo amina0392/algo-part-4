@@ -5,31 +5,20 @@ class Eleve {
      this.cours = classe;
      this.notes = {maths: [], algorithmique: [], javascript: []};
     } 
-
-    monPrenom() {
-      console.log(`Bonjour, mon prenom est ${this.firstname}`);
-    } 
-    maFormation() {
-        console.log(`Marie est en formation ${this.cours}`);
+    bonjour() {
+        console.log(`Je suis ${this.firstname}, en classe ${this.cours}`); 
     }
-    marieNotes() {   
-       this.notes.maths.push(12);
-       console.log(`La note de maths de Marie est de ${this.notes.maths}`);
+    ajoutNoteAlgo(n) {
+        this.notes.algorithmique.push(n);
+    }   
+    ajoutNoteMaths(n) {
+        this.notes.maths.push(n);
     }
-    jonhNotes () {
-      this.notes.maths.push(14);
-      console.log(`La note de maths de John est de ${this.notes.maths}`);
+    ajoutNotesJavascript(n) {
+        this.notes.javascript.push(n);
     }
-
 }
-let pierre = new Eleve("Dupont", "Pierre", "Kercode");
-let marie = new Eleve("Fontaine", "Marie", "CDA");
-let jonh = new Eleve("Hunter", "Jonh", "CDUI");
 
 
-pierre.monPrenom();
-marie.maFormation();
-marie.marieNotes();
-jonh.jonhNotes();
 
 
